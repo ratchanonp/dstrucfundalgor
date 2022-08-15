@@ -60,9 +60,11 @@ public class Main {
                     break;
                 case "delete":
                     ID = scanner.next();
+                    Student deleteStudent = new Student(ID, "", "", 0);
 
-                    if (StudentCollection.contains(new Student(ID, "", "", 0))) {
-                        StudentCollection.remove(new Student(ID, "", "", 0));
+                    // Check Object is in collection delete
+                    if (StudentCollection.contains(deleteStudent)) {
+                        StudentCollection.remove(deleteStudent);
                         System.out.println("Remove a record.");
                     } else {
                         System.out.println("Not Found");
@@ -75,10 +77,7 @@ public class Main {
                 default:
                     System.out.println("Invalid command.");
             }
-
         } while (!command.equals("stop"));
-
-
     }
 
     private static void writeFile(ArrayCollection StudentCollection) {

@@ -47,24 +47,24 @@ public class Main {
                     LName = scanner.next();
                     GPAX = scanner.nextDouble();
 
-                    // Update and Adding Data
                     Student newStudent = new Student(ID, FName, LName, GPAX);
-                    if (StudentCollection.contains(newStudent)) {
+                    if (StudentCollection.contains(newStudent)){
                         System.out.println("Duplicate Replace with new Data");
                         StudentCollection.remove(newStudent);
+                        StudentCollection.add(newStudent);
                     } else {
-                        System.out.println("Add new record.");
+                        StudentCollection.add(newStudent);
                     }
-                    StudentCollection.add(newStudent);
 
+                    System.out.println("Add new record.");
                     break;
                 case "delete":
                     ID = scanner.next();
+                    Student deleteStudent = new Student(ID, "", "", 0);
 
-                    Student removeStudent = new Student(ID, "", "", 0);
-
-                    if (StudentCollection.contains(removeStudent)) {
-                        StudentCollection.remove(removeStudent);
+                    // Check Object is in collection delete
+                    if (StudentCollection.contains(deleteStudent)) {
+                        StudentCollection.remove(deleteStudent);
                         System.out.println("Remove a record.");
                     } else {
                         System.out.println("Not Found");
@@ -77,23 +77,18 @@ public class Main {
                 default:
                     System.out.println("Invalid command.");
             }
-
         } while (!command.equals("stop"));
-
-
     }
 
     private static void writeFile(ArraySet StudentCollection) {
         try {
             FileWriter studentNEW = new FileWriter("src/studentNEW.csv");
             Object[] students = StudentCollection.toArray();
-
             for (int i = 0; i < students.length; i++) {
                 if (students[i] instanceof Student std) {
                     studentNEW.write(std.toString() + "\n");
                 }
             }
-
             studentNEW.close();
             System.out.println("Written to studentNew.csv");
         } catch (IOException e) {

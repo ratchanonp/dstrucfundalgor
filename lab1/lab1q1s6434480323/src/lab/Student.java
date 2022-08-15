@@ -36,7 +36,7 @@ public class Student {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Student student){
+        if (obj instanceof Student student) {
             return student.ID.equals(this.ID);
         }
         return false;
