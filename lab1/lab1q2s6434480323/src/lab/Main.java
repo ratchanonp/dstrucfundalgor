@@ -29,53 +29,51 @@ public class Main {
                 LName = line[2];
                 GPAX = Double.parseDouble(line[3]);
 
-                StudentCollection.add(new Student(ID, FName, LName, GPAX));
+                Student student = new Student(ID, FName, LName, GPAX);
+                StudentCollection.add(student);
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");
         }
+        // End Read Data From File
 
-        // Loop input until stop
+        // Loop input until input is stop
         do {
             System.out.println("add or delete or stop?");
             command = scanner.next();
 
             switch (command) {
-                case "add":
+                case "add" -> {
                     ID = scanner.next();
                     FName = scanner.next();
                     LName = scanner.next();
                     GPAX = scanner.nextDouble();
 
                     Student newStudent = new Student(ID, FName, LName, GPAX);
-                    if (StudentCollection.contains(newStudent)){
-                        System.out.println("Duplicate Replace with new Data");
+                    if (StudentCollection.contains(newStudent)) {
+                        System.out.println("Duplicate remove old data");
                         StudentCollection.remove(newStudent);
-                        StudentCollection.add(newStudent);
-                    } else {
-                        StudentCollection.add(newStudent);
                     }
+                    StudentCollection.add(newStudent);
 
                     System.out.println("Add new record.");
-                    break;
-                case "delete":
+                }
+                case "delete" -> {
                     ID = scanner.next();
                     Student deleteStudent = new Student(ID, "", "", 0);
 
-                    // Check Object is in collection delete
+                    // Check Object in collection
                     if (StudentCollection.contains(deleteStudent)) {
                         StudentCollection.remove(deleteStudent);
                         System.out.println("Remove a record.");
                     } else {
                         System.out.println("Not Found");
                     }
-
-                    break;
-                case "stop":
-                    writeFile(StudentCollection);
-                    break;
-                default:
+                }
+                case "stop" -> writeFile(StudentCollection);
+                default -> {
                     System.out.println("Invalid command.");
+                }
             }
         } while (!command.equals("stop"));
     }
@@ -84,15 +82,17 @@ public class Main {
         try {
             FileWriter studentNEW = new FileWriter("src/studentNEW.csv");
             Object[] students = StudentCollection.toArray();
-            for (int i = 0; i < students.length; i++) {
-                if (students[i] instanceof Student std) {
-                    studentNEW.write(std.toString() + "\n");
+
+            for (Object student : students) {
+                if (student instanceof Student std) {
+                    studentNEW.write(std + "\n");
                 }
             }
+
             studentNEW.close();
             System.out.println("Written to studentNew.csv");
         } catch (IOException e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
     }
 }

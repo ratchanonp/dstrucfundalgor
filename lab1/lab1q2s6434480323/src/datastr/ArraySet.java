@@ -40,10 +40,13 @@ public class ArraySet implements Collection {
 
     public void add(Object e) {
         if (e == null) throw new IllegalArgumentException();
+
+        // Add for array set if element is contain object e, don't add to element data.
         if (this.contains(e)) {
             System.out.println("Duplicate");
             return;
         }
+
         ensureCapacity(size + 1);
         elementData[size++] = e;
     }
