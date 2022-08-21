@@ -54,6 +54,7 @@ public class Main {
                         System.out.println("Duplicate remove old data");
                         StudentCollection.remove(newStudent);
                     }
+
                     StudentCollection.add(newStudent);
 
                     System.out.println("Add new record.");
