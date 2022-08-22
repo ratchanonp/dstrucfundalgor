@@ -8,8 +8,7 @@ public class LinkedCollection implements Collection {
     private final LinkedNode header = new LinkedNode(null, null);
     private int size;
 
-    public LinkedCollection() {
-    }
+    public LinkedCollection() {}
 
     public int size() {
         return size;

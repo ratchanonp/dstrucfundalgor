@@ -42,8 +42,7 @@ public class Main {
     }
 
     private static void printData(LinkedCollection linkedCollection) {
-        Object[] objArr;
-        objArr = linkedCollection.toArray();
+        Object[] objArr = linkedCollection.toArray();
         for (Object obj: objArr) System.out.println(obj);
     }
 
