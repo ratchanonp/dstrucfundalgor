@@ -46,7 +46,7 @@ public class Main {
         for (Object obj: objArr) System.out.println(obj);
     }
 
-    private static void readCSV(LinkedCollection StudentCollection, String pathname) {
+    private static void readCSV(LinkedCollection linkedCollection, String pathname) {
         double GPAX;
         String ID, FName, LName;
 
@@ -63,7 +63,7 @@ public class Main {
                 GPAX = Double.parseDouble(line[3]);
 
                 Student student = new Student(ID, FName, LName, GPAX);
-                StudentCollection.add(student);
+                linkedCollection.add(student);
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");
