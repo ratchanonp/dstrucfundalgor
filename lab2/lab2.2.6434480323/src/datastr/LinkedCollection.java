@@ -86,21 +86,19 @@ public class LinkedCollection implements Collection {
     }
 
     public void removeDup() {
-        LinkedNode currentNode, tempNode, checkNode;
+        LinkedNode currentNode, checkNode;
 
         currentNode = header.next;
         while (currentNode != null) {
-            tempNode = currentNode;
-            checkNode = currentNode.next;
+            checkNode = currentNode;
 
-            while (checkNode != null) {
-                if (checkNode.element.equals(currentNode.element)) {
-                    tempNode.next = checkNode.next;
+            while (checkNode.next != null) {
+                if (checkNode.next.element.equals(currentNode.element)) {
+                    checkNode.next = checkNode.next.next;
                     size--;
                 } else {
-                    tempNode = checkNode;
+                    checkNode = checkNode.next;
                 }
-                checkNode = checkNode.next;
             }
             currentNode = currentNode.next;
         }
