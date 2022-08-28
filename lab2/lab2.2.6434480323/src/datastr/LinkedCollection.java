@@ -105,7 +105,7 @@ public class LinkedCollection implements Collection {
     }
 
     public void removeAll(Object e) {
-        LinkedNode node = header.next;
+        LinkedNode node = header;
 
         while (node != null) {
             if (node.next != null && node.next.element.equals(e)) {
