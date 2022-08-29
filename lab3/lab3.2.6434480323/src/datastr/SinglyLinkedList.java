@@ -107,7 +107,7 @@ public class SinglyLinkedList implements List {
     }
 
     public void removeRange(int i, int j) {
-        nodeAt(i - 1).next = nodeAt(j).next;
+        nodeAt(i - 1).next = nodeAt(j);
     }
 
     @Override

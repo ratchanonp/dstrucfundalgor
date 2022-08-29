@@ -81,7 +81,7 @@ public class ArrayList implements List {
     }
 
     public void removeRange(int i, int j){
-        int newSize = size - (j - i) - 1;
+        int newSize = size - (j - i);
         Object[] afterRemove = new Object[newSize];
         int it = 0;
 
@@ -89,7 +89,7 @@ public class ArrayList implements List {
             afterRemove[it++] = elementData[k];
         }
 
-        for (int k = j + 1; k < size; k++) {
+        for (int k = j; k < size; k++) {
             afterRemove[it++] = elementData[k];
         }
 
