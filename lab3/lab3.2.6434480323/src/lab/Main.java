@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Reverse");
         System.out.println(singlyLinkedList);
 
-        // int i = 3, j = 96;
+        //  int i = 3, j = 96;
         int i = rand.nextInt(100);
         int j = rand.nextInt(100);
         singlyLinkedList.removeRange(Math.min(i, j), Math.max(i, j));
