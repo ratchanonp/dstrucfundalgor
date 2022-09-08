@@ -1,20 +1,18 @@
 package lab;
 
-import datastr.DenseMatrix;
-import datastr.DenseVector;
-import datastr.Matrix;
-import datastr.Vector;
+import datastr.*;
 
 public class Test {
     public static void main(String[] args) {
-        Vector vector = new DenseVector(3);
-        Matrix matrix = new DenseMatrix(3, 3);
+        // ใช้ทดเฉยๆ
 
+        Vector vector = new SparseVector(3);
         // Set Vector Value
         vector.set(0, 1);
         vector.set(1, 2);
         vector.set(2, 3);
 
+        Matrix matrix = new SparseMatrix(3, 3);
         // Set Matrix Value
         matrix.set(0, 0, 1);
         matrix.set(0, 1, 2);
@@ -27,7 +25,8 @@ public class Test {
         matrix.set(2, 2, 9);
 
         try {
-            System.out.println(matrix.multiply(vector));
+            System.out.println(vector);
+            System.out.println(vector.magnitude());
         } catch (Exception e) {
             System.out.println(e);
         }
