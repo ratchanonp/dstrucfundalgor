@@ -46,14 +46,30 @@ public class SparseVector implements Vector {
 
     @Override
     public Vector add(Vector v) throws Exception {
-        return null;
+
+        if (this.length() != v.length()) throw new Exception("Not same dimension");
+
+        Vector result = new SparseVector(length);
+        for (int i = 0; i < length; i++) {
+            result.set(i, this.get(i) + v.get(i));
+        }
+
+        return result;
     }
 
     @Override
     public Vector subtract(Vector v) throws Exception {
-        return null;
+        if (this.length() != v.length()) throw new Exception("Not same dimension");
+
+        Vector result = new SparseVector(length);
+        for (int i = 0; i < length; i++) {
+            result.set(i, this.get(i) - v.get(i));
+        }
+
+        return result;
     }
 
+    // ข้ออนุญาติแก้ไขชื่อ Method เพื่อป้องกันการสับสนกับการบวก
     void addElement(int i, int index, double value) {
         if (value != 0) {
             ensureCapacity(size + 1);

@@ -59,13 +59,4 @@ public interface Vector {
      * @return ผลคูณของ implicit parameter กับค่าคงที่ c
      */
     public Vector multiply(double c);
-
-    // ข้อ 2
-    /**
-     * คืน Vector ที่เป็นผลคูณของ implicit parameter (Vector) ด้วย explicit parameter (Matrix) โดยจะ throws exception เมื่อไม่สามารถคูณได้ (incompatibility for multiplication)
-     * @param m explicit parameter (Matrix)
-     * @return ผลคูณของ implicit parameter (Vector) ด้วย explicit parameter (Matrix)
-     * @throws Exception เมื่อไม่สามารถคูณได้ (incompatibility for multiplication)
-     */
-    public Vector multiply(Matrix m) throws Exception;
 }

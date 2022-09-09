@@ -50,6 +50,22 @@ public class DenseMatrix implements Matrix{
     }
 
     @Override
+    public Vector multiply(Vector v) throws Exception {
+        if (this.numCols() != v.length()) throw new Exception("Incompatibility for multiplication");
+
+        Vector result = new DenseVector(v.length());
+        for (int i = 0; i < this.numRows(); i++) {
+            double sum = 0;
+            for (int j = 0; j < v.length(); j++) {
+                sum += this.get(i,j) * v.get(j);
+            }
+            result.set(i, sum);
+        }
+
+        return result;
+    }
+
+    @Override
     public Matrix multiply(Matrix v) throws Exception {
 
         if (this.numCols() != v.numRows()) throw new IllegalArgumentException("Incompatibility for multiplication");
