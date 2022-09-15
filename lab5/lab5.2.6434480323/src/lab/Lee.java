@@ -26,22 +26,23 @@ public class Lee {
         map = Arrays.stream(gen_map).map(arr -> Arrays.copyOf(arr, arr.length)).toArray(int[][]::new);      // Deep Copy For Testing
         System.out.println("Find Path queue");
         findPath_queue(new Pos(0, 0), new Pos(0, map[0].length - 1));
-        printArr(findpath_queue_called);
+        printArr();
+        System.out.println("Loop : " + findpath_queue_called + " time(s)") ;
 
         // Find path using stack
         map = Arrays.stream(gen_map).map(arr -> Arrays.copyOf(arr, arr.length)).toArray(int[][]::new);      // Deep Copy For Testing
         System.out.println("Find Path Stack");
         findPath_stack(new Pos(0, 0), new Pos(0, map[0].length - 1));
-        printArr(findpath_stack_called);
+        printArr();
+        System.out.println("Loop : " + findpath_stack_called + " time(s)") ;
     }
 
-    private static void printArr(int findpath_queue_called) {
+    private static void printArr() {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++)
                 System.out.printf("%4d", map[i][j]);
             System.out.println();
         }
-        System.out.println("Loop : " + findpath_queue_called + " time(s)") ;
     }
 
     static void findPath_stack(Pos source, Pos target) {
