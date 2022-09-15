@@ -24,6 +24,9 @@ public class Lee {
 
         // Find path using queue
         map = Arrays.stream(gen_map).map(arr -> Arrays.copyOf(arr, arr.length)).toArray(int[][]::new);      // Deep Copy For Testing
+        System.out.println("Map");
+        printArr();
+
         System.out.println("Find Path queue");
         findPath_queue(new Pos(0, 0), new Pos(0, map[0].length - 1));
         printArr();
