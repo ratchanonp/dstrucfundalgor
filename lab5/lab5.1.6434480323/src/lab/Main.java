@@ -32,6 +32,6 @@ public class Main {
         System.out.print(ari);                  // Print Array Stack of ARI
         System.out.println(lastARI);            // Print Top state
 
-        return backR + s.substring(0, 1);       // Return of recursive
+        return backR + s.charAt(0);       // Return of recursive
     }
 }
