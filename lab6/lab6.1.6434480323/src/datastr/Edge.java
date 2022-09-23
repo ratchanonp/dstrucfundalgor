@@ -31,7 +31,7 @@ public class Edge {
     @Override
     public int hashCode() {
         int result = st.getName();
-        result = 32 * result + end.getName();
+        result = 31 * result + end.getName();
         return result;
     }
 }

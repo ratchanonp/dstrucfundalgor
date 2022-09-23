@@ -27,10 +27,11 @@ public class Graph {
             Vertex destVertex = vertices[random.nextInt(nVertex)];      // สุ่ม Destination Vertex
 
             Edge newEdge = new Edge(srcVertex, destVertex);              // สร้าง Edge ที่ได้จาก Vertex ที่สุ่ม
-            int randomWeight = random.nextInt(1, 5);        // สุ่มน้ำหนักของ edge (1-4)
 
             // Check ว่ามี newEdge แล้วไหม
             if (!weight.containsKey(newEdge)){                          // ถ้าไม่มี
+                int randomWeight = random.nextInt(1, 5);    // สุ่มน้ำหนักของ edge (1-4)
+
                 edges[nEdgeCreated] = newEdge;                          // ใส่ newEdge ใน edges
                 weight.put(edges[nEdgeCreated], randomWeight);          // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
                 nEdgeCreated++;                                         // นับเป็น 1 Edge ที่ไม่ซ้ำ
@@ -45,7 +46,7 @@ public class Graph {
      */
     public Graph(int[][] adjMat) {
 
-        int nVertex = adjMat.length;
+        int nVertex = adjMat.length;                                    // แถวของ AdjMat คือ nVertex
         int nEdge = 0;
 
         for (int i = 0; i < adjMat.length; i++) {
@@ -69,8 +70,9 @@ public class Graph {
                 int weight = adjMat[i][j];
 
                 if (weight != 0) {
-                    edges[e] = new Edge(vertices[i], vertices[j]);
-                    this.weight.put(edges[e], weight);
+                    Edge newEdge = new Edge(vertices[i], vertices[j]);      //
+                    edges[e] = newEdge;
+                    this.weight.put(newEdge, weight);
                     e++;
                 }
             }
@@ -88,16 +90,16 @@ public class Graph {
         กราฟ ค่าที่ตำแหน่ง [a, b] ใน array นี้เป็นน้ำหนักของ edge ระหว่าง vertex ที่ตำแหน่ง a และตำแหน่ง b )
      */
     public int[][] toMatrix() {
-        int[][] result = new int[vertices.length][vertices.length];
+        int nVertex = vertices.length;
+        int[][] adjMat = new int[nVertex][nVertex];
 
-        for (Edge edge : edges) {
-            int sourceVertex = edge.getSource();
+        for (Edge edge: edges) {
+            int srcVertex = edge.getSource();
             int destVertex = edge.getDest();
-            int edgeWeight = weight.get(edge);
-
-            result[sourceVertex][destVertex] = edgeWeight;
+            int w = weight.get(edge);
+            adjMat[srcVertex][destVertex] = w;
         }
 
-        return result;
+        return adjMat;
     }
 }

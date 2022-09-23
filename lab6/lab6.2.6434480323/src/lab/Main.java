@@ -18,20 +18,20 @@ public class Main {
             Scanner registerScanner = new Scanner(registerFile);
 
             while (registerScanner.hasNextLine()) {
-                String record = registerScanner.nextLine();
-                String[] recordData = record.strip().split(",");        // spilt ด้วย ","
+                String record           = registerScanner.nextLine();
+                String[] recordData     = record.strip().split(",");        // spilt ด้วย ","
 
-                int studentId       = Integer.parseInt(recordData[0]);
-                String studentFName = recordData[1];
-                String studentLName = recordData[2];
-                Student student     = new Student(studentId, studentFName, studentLName);
+                int studentId           = Integer.parseInt(recordData[0]);
+                String studentFName     = recordData[1];
+                String studentLName     = recordData[2];
+                Student student         = new Student(studentId, studentFName, studentLName);
 
-                int courseId        = Integer.parseInt(recordData[3]);
-                String courseName   = recordData[4];
-                int semester        = Integer.parseInt(recordData[5]);
-                int year            = Integer.parseInt(recordData[6]);
-                int credit          = Integer.parseInt(recordData[7]);
-                double grade        = Double.parseDouble(recordData[8]);
+                int courseId            = Integer.parseInt(recordData[3]);
+                String courseName       = recordData[4];
+                int semester            = Integer.parseInt(recordData[5]);
+                int year                = Integer.parseInt(recordData[6]);
+                int credit              = Integer.parseInt(recordData[7]);
+                double grade            = Double.parseDouble(recordData[8]);
                 CourseGrade courseGrade = new CourseGrade(courseId, courseName, semester, year, credit, grade);
 
                 if (data.containsKey(student)) {
