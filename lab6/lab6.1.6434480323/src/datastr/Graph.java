@@ -34,8 +34,6 @@ public class Graph {
                 edges[nEdgeCreated] = newEdge;                          // ใส่ Edge ใน Edge[] edges
                 weight.put(edges[nEdgeCreated], randomWeight);          // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
                 nEdgeCreated++;                                         // นับเป็น 1 Edge ที่ไม่ซ้ำ
-            } else if (weight.containsKey(newEdge) && weight.get(newEdge) != randomWeight) {    // ถ้ามีอยู่แล้ว
-                weight.put(newEdge, randomWeight);                                              // Update Edge เดิมด้วย Weight ใหม่
             }
         }
     }
