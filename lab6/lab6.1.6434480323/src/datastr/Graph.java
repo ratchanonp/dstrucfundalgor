@@ -31,7 +31,7 @@ public class Graph {
 
             // Check ว่ามี newEdge แล้วไหม
             if (!weight.containsKey(newEdge)){                          // ถ้าไม่มี
-                edges[nEdgeCreated] = newEdge;                          // ใส่ Edge ใน Edge[] edges
+                edges[nEdgeCreated] = newEdge;                          // ใส่ newEdge ใน edges
                 weight.put(edges[nEdgeCreated], randomWeight);          // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
                 nEdgeCreated++;                                         // นับเป็น 1 Edge ที่ไม่ซ้ำ
             }
