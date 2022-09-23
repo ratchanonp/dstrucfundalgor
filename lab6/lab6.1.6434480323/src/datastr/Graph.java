@@ -20,14 +20,20 @@ public class Graph {
 
         /* Graph Generation Part */
         for (int i = 0; i < nVertex; i++) vertices[i] = new Vertex(i);  // Loop สร้าง Vertex จำนวน nVertex
-        for (int i = 0; i < nEdge; i++) {
+
+        int nEdgeCreated = 0;
+        while(nEdgeCreated < nEdge) {
             Vertex srcVertex = vertices[random.nextInt(nVertex)];       // สุ่ม Source Vertex
             Vertex destVertex = vertices[random.nextInt(nVertex)];      // สุ่ม Destination Vertex
 
-            edges[i] = new Edge(srcVertex, destVertex);                 // สร้าง Edge ที่ได้จาก Vertex ที่สุ่ม
+            Edge newEdge = new Edge(srcVertex, destVertex);              // สร้าง Edge ที่ได้จาก Vertex ที่สุ่ม
             int randomWeight = random.nextInt(1, 5);        // สุ่มน้ำหนักของ edge (1-4)
 
-            weight.put(edges[i], randomWeight);                         // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
+            if (!weight.containsKey(newEdge)){
+                edges[nEdgeCreated] = newEdge;                          // ใส่ Edge ใน Edge[] edges
+                weight.put(edges[nEdgeCreated], randomWeight);          // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
+                nEdgeCreated++;                                         // นับเป็น 1 Edge ที่ไม่ซ้ำ
+            }
         }
     }
 
