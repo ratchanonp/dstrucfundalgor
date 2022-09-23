@@ -15,7 +15,13 @@ public class Main {
         int[][] adjMat = new int[nVertex][nVertex];
         for (int i = 0; i < nVertex; i++) {
             for (int j = 0; j < nVertex; j++) {
-                adjMat[i][j] = random.nextInt() % 2 == 1 ? random.nextInt(1, 5) : 0;
+                boolean isCreateEdges = random.nextInt() % 2 == 0;          // สุ่มว่าจะเกิด Edge จาก i ไป j ไหม (50/50)
+
+                if (isCreateEdges) {
+                    adjMat[i][j] = random.nextInt(1, 6);       // เกิด Edge สุ่มว่า edge มีน้ำหนักเท่าไร (1-5)
+                } else {
+                    adjMat[i][j] = 0;                                       // ไม่เกิด Edge
+                }
             }
         }
 
