@@ -26,5 +26,5 @@ public class Student {
     @Override
     public int hashCode() {
         return id;
-    }
+    }                   // Hashcode ใช้ student id เลย
 }
