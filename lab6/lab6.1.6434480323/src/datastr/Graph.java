@@ -29,10 +29,13 @@ public class Graph {
             Edge newEdge = new Edge(srcVertex, destVertex);              // สร้าง Edge ที่ได้จาก Vertex ที่สุ่ม
             int randomWeight = random.nextInt(1, 5);        // สุ่มน้ำหนักของ edge (1-4)
 
-            if (!weight.containsKey(newEdge)){
+            // Check ว่ามี newEdge แล้วไหม
+            if (!weight.containsKey(newEdge)){                          // ถ้าไม่มี
                 edges[nEdgeCreated] = newEdge;                          // ใส่ Edge ใน Edge[] edges
                 weight.put(edges[nEdgeCreated], randomWeight);          // ใส่ Edge ใน Hashmap <Key: Edge, Value: weight>
                 nEdgeCreated++;                                         // นับเป็น 1 Edge ที่ไม่ซ้ำ
+            } else if (weight.containsKey(newEdge) && weight.get(newEdge) != randomWeight) {    // ถ้ามีอยู่แล้ว
+                weight.put(newEdge, randomWeight);                                              // Update Edge เดิมด้วย Weight ใหม่
             }
         }
     }
