@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class Graph {
 
-    Vertex[] vertices;
-    Edge[] edges;
-    HashMap<Edge, Integer> weight;
+    private Vertex[] vertices;
+    private Edge[] edges;
+    private HashMap<Edge, Integer> weight;
 
     /* constructor ที่รับจำนวน vertex และจำนวน edge ในกราฟมาแล้วสร้าง weighted graph โดยสุ่ม edge และน้ำหนักของ edge (1-4) */
     public Graph(int nVertex, int nEdge) {
