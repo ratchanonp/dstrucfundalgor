@@ -18,6 +18,7 @@ public class Edge {
         return end.getName();
     }
 
+    // เพิ่มเติมสำหรับ Hashmap
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -32,12 +33,5 @@ public class Edge {
         int result = st.getName();
         result = 32 * result + end.getName();
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "(" + st +
-                "," + end +
-                ")";
     }
 }

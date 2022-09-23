@@ -12,6 +12,7 @@ public class Vertex {
         return ""+name;
     }
 
+    // เพิ่มเตืมสำหรับ Hashmap
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
