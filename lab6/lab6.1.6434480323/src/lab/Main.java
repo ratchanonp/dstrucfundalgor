@@ -25,8 +25,8 @@ public class Main {
 
         Graph graph_1 = new Graph(adjMat);
         Graph graph_2 = new Graph(nVertex, nVertex * nVertex / 4);
-        System.out.println("nVertex : " + nVertex);
-        System.out.println("nEdge : " + nVertex * nVertex / 4);
+//        System.out.println("nVertex : " + nVertex);
+//        System.out.println("nEdge : " + nVertex * nVertex / 4);
 
         System.out.println("Random adjacency matrix of graph 1");
         printMatrix(adjMat);
