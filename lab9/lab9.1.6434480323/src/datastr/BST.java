@@ -48,60 +48,69 @@ public class BST {
     }
 
     /**
-     *
-     * @param element
+     * BST remove method without recursive
+     * @param element ค่าที่ต้องการลบ
      */
     public void remove(int element) {
 
-        /* Step 1 : find s and parent of that s */
-        BTNode s = root, parent = null;
+        /* Step 1 : หา node ที่ต้องการลบ และ parent ของ node */
+        BTNode s = root, p = null;
         while (s != null && s.getElement() != element) {
-            parent = s;
+            p = s;
 
             if (element < s.getElement()) s = s.getLeft();
             else s = s.getRight();
         }
 
+        /* Step 1.5 : Traverse จนถึง node ลึกสุดของ BST แล้วไม่พบ */
         if (s == null) {
-//            System.out.println("Node not founded");
+            //System.out.println("Node not founded");
             return;
         }
 
-        // 0 Child
+        /* Step 2 : ขั้นการลบ
+        * มี 3 เงื่อนไข :
+        * ไม่มี child node
+        * มี child node 1 / 2 อัน
+        * */
+
+
+        /* 2.1 ไม่ม่ี Child Node */
         if (s.getLeft() == null && s.getRight() == null) {
             if (s == root) root = null;
-            else if (parent.getLeft() == s) parent.setLeft(null);
-            else parent.setRight(null);
+            else if (p.getLeft() == s) p.setLeft(null);
+            else p.setRight(null);
         }
 
-        // 2 Child
+        /* 2.2 มี Child Node 2 Node
+        * หา node q สำหรับไปแทนที่ s และ parent ของ node q สำหรับลบ node นั้น
+        * */
         else if (s.getLeft() != null && s.getRight() != null) {
-
-            // Find replace s and it parent
             BTNode pq = s;
             BTNode q = s.getLeft();                     // สนใจ Left Subtree
-            while (q.getRight() != null) {              // loop หาค่าที่มากที่สุด
+
+            while (q.getRight() != null) {              // While loop หาค่าที่มากที่สุด
                 pq = q;
                 q = q.getRight();                       // Traverse ไปทางขวาต่อ
             }
 
-            s.setElement(q.getElement());            // แทนที่ค่าที่ต้องการลบด้วย s ที่มากที่สุดของฝั่งซ้าย
+            s.setElement(q.getElement());                           // แทนที่ค่าที่ต้องการลบด้วย s ที่มากที่สุดของฝั่งซ้าย
 
-            if (pq != s) pq.setRight(q.getLeft());   // สามารถหา s มากสุดของ subtree ซ้ายได้
-            else pq.setLeft(q.getLeft());               // ไม่สามารถหา s ใน subtree ด้านซ้าย
+            if (pq != s)    pq.setRight(q.getLeft());               // สามารถหา s มากสุดของ subtree ซ้ายได้
+            else            pq.setLeft(q.getLeft());                // ไม่สามารถหา s ใน subtree ด้านซ้าย
         }
 
-        // 1 Child
+        /* 2.3 มี Child Node 1 Node */
         else {
             if (s == root) {
                 if (s.getLeft() != null) s = s.getLeft();
                 else s = s.getRight();
-            } else if (parent.getLeft() == s) {
-                if (s.getLeft() != null) parent.setLeft(s.getLeft());
-                else parent.setLeft(s.getRight());
+            } else if (p.getLeft() == s) {
+                if (s.getLeft() != null) p.setLeft(s.getLeft());
+                else p.setLeft(s.getRight());
             } else {
-                if (s.getLeft() != null) parent.setRight(s.getLeft());
-                else parent.setRight(s.getRight());
+                if (s.getLeft() != null) p.setRight(s.getLeft());
+                else p.setRight(s.getRight());
             }
         }
 
