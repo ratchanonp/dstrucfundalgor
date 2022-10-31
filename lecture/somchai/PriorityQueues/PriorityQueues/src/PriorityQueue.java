@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface PriorityQueue {
+public interface PriorityQueue extends Queue{
+    public Object dequeue();
+    public Object peek();
 }

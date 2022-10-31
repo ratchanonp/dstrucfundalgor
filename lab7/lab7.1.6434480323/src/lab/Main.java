@@ -35,7 +35,7 @@ public class Main {
                 double grade            = Double.parseDouble(recordData[8]);
                 CourseGrade courseGrade = new CourseGrade(courseId, courseName, semester, year, credit, grade);
 
-                data.put(student, courseGrade);
+                data.put(student, courseGrade);     // Put Data ลง Separate Chaining
             }
         } catch (Exception e) {
             System.out.println(e);

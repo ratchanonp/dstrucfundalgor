@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -9,7 +10,10 @@ public class Main {
             objects[i] = random.nextInt(50);
         }
 
-        BinaryHeap binaryHeap = new BinaryHeap(objects);
-        System.out.println(binaryHeap);
+        BinaryMinHeap binaryHeap = new BinaryMinHeap(objects);
+
+        BinaryMinHeap.heapSort(objects);
+        System.out.println(Arrays.toString(objects));
+        System.out.println(BinaryMinHeap.select(objects, 3));
     }
 }

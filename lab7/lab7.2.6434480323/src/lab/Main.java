@@ -24,7 +24,7 @@ public class Main {
         }
         Graph graph = new Graph(adjMat);
 
-        System.out.println("adjacency matrix");
+        System.out.println("adjacency matrix");y
         printMatrix(adjMat);
         System.out.println("-----------------");
 

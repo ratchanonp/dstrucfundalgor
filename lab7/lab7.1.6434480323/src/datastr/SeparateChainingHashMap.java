@@ -38,8 +38,8 @@ public class SeparateChainingHashMap implements Map {
     }
 
     public Object put(Object key, Object value) {
-        LinkedNode node = getNode(key);
 
+        // Edit Make it chain
         int h = h(key);
         table[h] = new LinkedNode(key, value, table[h]);
         ++size;
@@ -72,13 +72,14 @@ public class SeparateChainingHashMap implements Map {
         for (int i = 0; i < table.length; i++) {
             result += String.format("[%d]", i);
 
-            LinkedNode header = table[i];
-            if (header != null) {
+            LinkedNode node = table[i];
+            if (node != null) {
                 result += " => [";
-                while (header != null) {
-                    result += header.value;
-                    if (header.next != null) result += ", ";
-                    header = header.next;
+                while (node != null) {
+                    result += node.value;
+                    if (node.next != null) result += ", ";
+
+                    node = node.next;
                 }
                 result += "]";
             }

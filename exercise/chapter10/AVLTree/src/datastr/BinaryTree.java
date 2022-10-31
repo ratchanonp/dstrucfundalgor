@@ -1,2 +1,4 @@
-package datastr;public class BinaryTree {
+package datastr;
+
+public class BinaryTree {
 }

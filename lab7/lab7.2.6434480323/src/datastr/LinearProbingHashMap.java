@@ -1,23 +1,8 @@
 package datastr;
 
 public class LinearProbingHashMap implements Map {
-    private static class Entry {
-        Object key, value;
-
-        Entry(Object k, Object v) {
-            key = k;
-            value = v;
-        }
-
-        @Override
-        public String toString() {
-            return key + " : " + value;
-        }
-    }
-
     private Entry[] table;
     private int size;
-
     public LinearProbingHashMap(int m) {
         table = new Entry[m];
     }
@@ -92,9 +77,22 @@ public class LinearProbingHashMap implements Map {
     public String toString() {
         String result = "";
         for (int i = 0; i < table.length; i++) {
-            result += String.format("[%d]", i);
-            result += " => " + table[i] + "\n";
+            result += String.format("[%d] => %s\n", i, table[i]);
         }
         return result;
+    }
+
+    private static class Entry {
+        Object key, value;
+
+        Entry(Object k, Object v) {
+            key = k;
+            value = v;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%s : %s", key, value);
+        }
     }
 }

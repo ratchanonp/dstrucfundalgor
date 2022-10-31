@@ -1,22 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddc34ae8-a80e-4709-8000-7f21d2ce7de6" name="Changes" comment="" />
+    <list default="true" id="ddc34ae8-a80e-4709-8000-7f21d2ce7de6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../exercise/chapter10/AVLTree/AVLTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../exercise/chapter10/AVLTree/src/datastr/BSTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../exercise/chapter10/AVLTree/src/datastr/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BSTree/BSTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BSTree/src/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BSTree/src/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/Expression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/src/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Expression/src/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/HuffmanTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/src/BinaryMinHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/src/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/src/HuffmanTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/src/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuffmanTree/src/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryHeap/BinaryHeap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryHeap/src/BinaryHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryHeap/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryHeap/src/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryHeap/src/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/BinaryMinHeap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/src/BinaryMinHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/src/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/BinaryMinHeap/src/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/PriorityQueues/PriorityQueues.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/PriorityQueues/src/ArrayPQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/PriorityQueues/src/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PriorityQueues/PriorityQueues/src/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../exercise/chapter8/HashTable3dCoor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../exercise/chapter8/HashTable3dCoor/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../exercise/chapter8/HashTable3dCoor/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../exercise/chapter8/HashTable3dCoor/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../exercise/chapter8/Triple/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../exercise/chapter8/Triple/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../exercise/chapter8/Triple/src/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../exercise/chapter8/Triple/src/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab4/lab4.1.6434480323/src/datastr/SparseVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab4/lab4.1.6434480323/src/datastr/SparseVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab5/lab5.2.6434480323.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab5/lab5.2.6434480323.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab5/lab5.2.6434480323.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab5/lab5.2.6434480323.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/datastr/SeparateChainingHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/datastr/SeparateChainingHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/datastr/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/datastr/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/lab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab7/lab7.1.6434480323/src/lab/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab7/lab7.2.6434480323/src/datastr/LinearProbingHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab7/lab7.2.6434480323/src/datastr/LinearProbingHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../lab7/lab7.2.6434480323/src/lab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../lab7/lab7.2.6434480323/src/lab/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2GrCeJHhzTyTzYBNeGVPOkXZmcH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -27,7 +112,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667137409497</updated>
+      <workItem from="1667137410718" duration="3466000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

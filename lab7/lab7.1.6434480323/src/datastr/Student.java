@@ -25,6 +25,8 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return id;
+        int result = id / 1000;
+        result = result % 10000;
+        return result;
     }                   // Hashcode ใช้ student id เลย
 }
