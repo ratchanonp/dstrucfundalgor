@@ -15,6 +15,7 @@ public class Main {
         tree.printTree();
         tree.remove(3);
         tree.printTree();
+        tree.printDetail();
 
         System.out.println("========== [Tree2] ==========");
         AVLTree tree2 = new AVLTree();
@@ -28,5 +29,21 @@ public class Main {
         tree2.printTree();
         tree2.remove(40);
         tree2.printTree();
+        tree2.printDetail();
+
+        System.out.println("========== [Tree Test] ==========");
+        AVLTree tree3 = new AVLTree();
+        tree3.add(1);
+        tree3.add(2);
+        tree3.add(3);
+        tree3.add(6);
+        tree3.add(8);
+        tree3.add(4);
+        tree3.add(15);
+        tree3.add(14);
+        tree3.printTree();
+        tree3.remove(40);
+        tree3.printTree();
+        tree3.printDetail();
     }
 }

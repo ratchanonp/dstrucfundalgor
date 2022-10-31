@@ -66,8 +66,20 @@ public class AVLTree extends BST {
         return newRoot;
     }
 
-    @Override
-    public String toString() {
-        return "AVLTree" + getRoot();
+
+    /*
+        ตรวจว่า AVLTree มีข้อมูลแต่ละ Node เป็นยังไง
+     */
+
+    public void printDetail() {
+        traversal(getRoot());
     }
+
+    public void traversal(BTNode r) {
+        if (r == null) return;
+        traversal(r.left);
+        System.out.printf("Element: %d \t Height: %d\n", r.element, ((AVLNode) r).height(r));
+        traversal(r.right);
+    }
+
 }

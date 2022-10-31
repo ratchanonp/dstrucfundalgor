@@ -27,7 +27,7 @@ class BST {
         } else {
             if (newElement < r.element)
                 r.left = add(r.left, newElement);
-            else
+            else if (newElement > r.element)
                 r.right = add(r.right, newElement);
         }
         return r;
