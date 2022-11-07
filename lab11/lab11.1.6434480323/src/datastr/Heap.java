@@ -7,22 +7,17 @@ public class Heap {
     private int[] elementData;
     private int size;
 
-    public Heap(int cap) {
-        elementData = new int[cap];
-    }
+    public Heap() {}    // Empty Constructor for allocation
 
-    private int dequeue() {
-        int max = elementData[0];
-        elementData[0] = elementData[--size];
-        if (size > 1) fixDown(0);
-        return max;
-    }
-
+    /**
+     * Heap Adjust แบบ fixDown แบบอจ.สมชาย
+     * @param k
+     */
     private void fixDown(int k) {
         int c;
-        while ((c = 2 * k + 1) < size) {
-            if (c + 1 < size && elementData[c + 1] > elementData[c]) c++;
-            if (!(elementData[c] > elementData[k])) break;
+        while ((c = 2 * k + 1) < size) {                                    // Loop เมื่อยังมีลูกซ้าย
+            if (c + 1 < size && elementData[c + 1] > elementData[c]) c++;   // เมื่อมีลูกขวาและลูกทางขวา > ลูกทางซ้าย
+            if (!(elementData[c] > elementData[k])) break;                  // Break เมื่อลูกมากกว่าพ่อ
 
             // Swap
             int temp = elementData[k];
@@ -33,13 +28,17 @@ public class Heap {
         }
     }
 
+    /**
+     * สร้าง Binary Heap แบบค่อยๆปรับ
+     * @param data array ที่ต้องการจะปรับเป็น Binary Heap
+     */
+    public static void createHeap(int[] data) {
+        Heap heap = new Heap();
+        heap.elementData = data.clone();                                          // Copy ข้อมูลเข้า heap elementData
+        heap.size = data.length;                                                  // ค่า size ใส่ใน Object Heap
 
-    public static void createHeap(int[] d) {
-        Heap h = new Heap(0);
-        h.elementData = d.clone();
-        h.size = d.length;
-        for (int i = h.size - 1; i >= 0; i--) h.fixDown(i);
+        for (int i = heap.size - 1; i >= 0; i--) heap.fixDown(i);                 // ปรับ Heap แบบ FixDown ลงมาเรื่อยๆ
 
-        if (h.size >= 0) System.arraycopy(h.elementData, 0, d, 0, h.size);
+        System.arraycopy(heap.elementData, 0, data, 0, heap.size);   // Copy ข้อมูลจาก Heap เข้่า Array เดิม
     }
 }
