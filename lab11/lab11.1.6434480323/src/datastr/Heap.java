@@ -41,4 +41,11 @@ public class Heap {
 
         System.arraycopy(heap.elementData, 0, data, 0, heap.size);   // Copy ข้อมูลจาก Heap เข้่า Array เดิม
     }
+
+    public static void printHeap(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i]+ " ");
+        }
+        System.out.println();
+    }
 }
