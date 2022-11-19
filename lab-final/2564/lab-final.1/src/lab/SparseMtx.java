@@ -109,7 +109,7 @@ public class SparseMtx {
         int row, col;
         double value;
 
-        // Constructor เอาไว้สร้าง Key สำหรับหาค่า
+        // Constructor เอาไว้สร้าง Key สำหรับbหาค่า
         public MatrixElement(int row, int col) {
             this.row = row;
             this.col = col;
