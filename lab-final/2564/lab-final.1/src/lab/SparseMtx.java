@@ -41,15 +41,15 @@ public class SparseMtx {
 
     /**
      * Method ช่วยในการดึงค่าจาก Matrix ตำแหน่งที่ Row Column
-     * @param row ตำแหน่งแถว
-     * @param col ตำแหน่งหลัก
+     * @param i ตำแหน่งแถว
+     * @param j ตำแหน่งหลัก
      * @return ค่าที่แถวและหลักนั้น
      */
-    private double get(int row, int col) {
-        MatrixElement ref = new MatrixElement(row, col);
+    private double get(int i, int j) {
+        MatrixElement key = new MatrixElement(i, j);
 
         // Get แล้วไม่ null
-        if (data.getByKey(ref) instanceof MatrixElement matrixElement) {
+        if (data.getByKey(key) instanceof MatrixElement matrixElement) {
             return matrixElement.value;
         }
 
@@ -109,7 +109,7 @@ public class SparseMtx {
         int row, col;
         double value;
 
-        // Constructor เอาไว้สร้าง Key สำหรับbหาค่า
+        // Constructor เอาไว้สร้าง Key สำหรับ หาค่า
         public MatrixElement(int row, int col) {
             this.row = row;
             this.col = col;
