@@ -90,10 +90,9 @@ public class SparseMtx {
                 double m2v = m.get(i, j);
                 double ans = m1v + m2v;
 
-                MatrixElement ansElement = new MatrixElement(i, j , ans);
-
                 // นำมาบวกกันและผลลัพธ์ไม่ใช่ 0 นำไปเก็บใน SparseMatrix ผลลัพธ์
                 if (ans != 0) {
+                    MatrixElement ansElement = new MatrixElement(i, j , ans);
                     result.data.add(ansElement);
                 }
             }
