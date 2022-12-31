@@ -8,6 +8,11 @@ public class AVLNode extends BTNode {
         setHeight();
     }
 
+    public static int numNode(BTNode r) {
+        if (r == null) return 0;
+        return 1 + numNode(r.left) + numNode(r.right);
+    }
+
     public void setHeight() {
         height = 1 + Math.max(height(left), height(right));
     }

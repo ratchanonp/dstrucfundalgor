@@ -6,6 +6,9 @@ public class AVLTree extends BST {
         setRoot(add(getRoot(), newElement));
     }
 
+    int k;
+    int []result;
+
     BTNode add(BTNode r, int newElement) {
         if (r == null) {
             r = new AVLNode(newElement, null, null);
@@ -43,6 +46,7 @@ public class AVLTree extends BST {
     }
 
     BTNode rotateLeftChild(BTNode r) {
+        System.out.println("Rotate Left Child");
         BTNode newRoot = r.left;
 
         r.left = newRoot.right;
@@ -55,6 +59,7 @@ public class AVLTree extends BST {
     }
 
     BTNode rotateRightChild(BTNode r) {
+        System.out.println("Rotate Right Child");
         BTNode newRoot = r.right;
 
         r.right = newRoot.left;
@@ -82,4 +87,20 @@ public class AVLTree extends BST {
         traversal(r.right);
     }
 
+    public int[] toArrays() {
+        result = new int[AVLNode.numNode(getRoot())];
+        k = 0;
+
+        inOrderToArray(getRoot());
+
+        return result;
+    }
+
+    public void inOrderToArray(BTNode r) {
+        if (r == null) return;
+
+        inOrderToArray(r.left);
+        result[k++] = r.element;
+        inOrderToArray(r.right);
+    }
 }

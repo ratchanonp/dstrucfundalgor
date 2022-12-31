@@ -1,3 +1,5 @@
+package datastr;
+
 public class SplayNode {
     public int data;
     public SplayNode left;

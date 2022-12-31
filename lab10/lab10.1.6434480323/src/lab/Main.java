@@ -2,6 +2,8 @@ package lab;
 
 import datastr.AVLTree;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("========== [Tree1] ==========");
@@ -45,5 +47,7 @@ public class Main {
         tree3.remove(40);
         tree3.printTree();
         tree3.printDetail();
+
+        System.out.println(Arrays.toString(tree3.toArrays()));
     }
 }

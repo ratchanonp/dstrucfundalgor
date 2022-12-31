@@ -20,7 +20,7 @@ public class AVLTree {
     private AVLNode rotate(AVLNode r) {
         if (r == null) return r;
 
-        updateW(r);
+        //updateW(r);
         if (r.weight == -2) {
             if (r.left.weight == 1)     r = doubleLeftRotate(r);
             else                        r = singleLeftRotate(r);
